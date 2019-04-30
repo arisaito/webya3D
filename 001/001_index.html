@@ -1,0 +1,80 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>3D world #001</title>
+    <link href="001_index.css" rel="stylesheet" type="text/css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:700"
+      rel="stylesheet"
+    />
+    <script
+      type="text/javascript"
+      src="//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"
+    ></script>
+    <script src="001_index.js"></script>
+    <!-- aframe library -->
+    <script src="https://aframe.io/releases/0.9.1/aframe.min.js"></script>
+  </head>
+
+  <body>
+    <div class="container" id="container">
+      <div id="modal" class="modal">
+        <div id="modalBg" class="modalBg"></div>
+        <div class="modalWrapper">
+          <div class="modalContents">
+            <center>
+              <h2>Release 3D world</h2>
+            </center>
+            <p>このページは360度見回せるwebVRのページです。</p>
+            <br />
+            <p>
+              iOS12.2でSafariのブラウザをお使いの場合、角度センサーが初期設定でオフになっています。
+            </p>
+            <p>以下の方法で設定を変更してください。</p>
+            <br />
+            <p>
+              <b
+                >「設定」＞「Safari」＞「プライバシーとセキュリティ：モーションと画面の向きのアクセス」＞オン</b
+              >
+            </p>
+            <br />
+            <p>通常の2Dウェブサイトはこちら</p>
+            <p>
+              <a href="https://arisaito.github.io/web/2D/2Dweb.html"
+                >Arisa Ito web</a
+              >
+            </p>
+            <div id="closeModal" class="closeModal">
+              <br /><br />
+              <center>
+                <div class="btn">
+                  <p>OK</p>
+                </div>
+              </center>
+              <br />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <a-scene>
+        <a-box position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9"></a-box>
+        <a-sphere position="0 1.25 -5" radius="1.25" color="#EF2D5E"></a-sphere>
+        <a-cylinder
+          position="1 0.75 -3"
+          radius="0.5"
+          height="1.5"
+          color="#FFC65D"
+        ></a-cylinder>
+        <a-plane
+          position="0 0 -4"
+          rotation="-90 0 0"
+          width="4"
+          height="4"
+          color="#7BC8A4"
+        ></a-plane>
+        <a-sky color="#ECECEC"></a-sky>
+      </a-scene>
+    </div>
+  </body>
+</html>
