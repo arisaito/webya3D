@@ -1,0 +1,23 @@
+{
+  "name": "webya3d",
+  "version": "1.0.0",
+  "description": "arisaito",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arisaito/webya3D.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/arisaito/webya3D/issues"
+  },
+  "homepage": "https://github.com/arisaito/webya3D#readme",
+  "dependencies": {
+    "aframe-effects": "^0.9.1",
+    "require": "^2.4.20"
+  }
+}
