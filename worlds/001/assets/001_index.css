@@ -6,7 +6,7 @@
   color: #464242;
 }
 
-#container #modal {
+.modal {
   display: none;
 }
 
