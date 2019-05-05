@@ -53,17 +53,23 @@
       </div>
 
       <a-scene  vr-mode-ui="enabled: false">
-        <a-entity
-          id="sphereWrapper"
-          animation="easing: linear; property:rotation; dur:20000; to:0 360 0; loop: true"
-        >
+
+      <a-entity animation="easing: linear; property:rotation; dur:50000; to:0 360 0; loop: true;" >
+     
+          <a-entity animation="property: position; to:0 1 0; dir: alternate; dur:5000; loop:true" >
+        <!-- cube 自動生成 -->
+     <a-entity id="sphereWrapper" position="0 0 0" rotation="0 0 0" scale="1 1 1" visible="tre">
+      </a-entity>
           <a-sphere
             position="0 1.25 -5
             radius="1"
             color="#EF2D5E"
             metalness="1"
-          ></a-sphere
+          >
+          </a-sphere
         ></a-entity>
+      </a-entity>
+    </a-entity>
 
         <a-sky color="black"></a-sky>
       </a-scene>
