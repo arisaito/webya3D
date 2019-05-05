@@ -8,14 +8,17 @@
       href="https://fonts.googleapis.com/css?family=Roboto:700"
       rel="stylesheet"
     />
-    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script
+      type="text/javascript"
+      src="//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"
+    ></script>
     <script src="assets/001_index.js"></script>
     <!-- aframe library -->
     <script src="https://aframe.io/releases/0.9.1/aframe.min.js"></script>
     <!-- alongpath I guess -->
     <script src="https://rawgit.com/protyze/aframe-curve-component/master/dist/aframe-curve-component.min.js"></script>
     <script src="https://rawgit.com/protyze/aframe-alongpath-component/master/dist/aframe-alongpath-component.min.js"></script>
-    <script src="https://wizgrav.github.io/aframe-effects/dist/aframe-effects.js"></script> 
+    <script src="https://wizgrav.github.io/aframe-effects/dist/aframe-effects.js"></script>
   </head>
 
   <body>
@@ -51,15 +54,27 @@
           </div>
         </div>
       </div>
+      <div id="ui">
+        <span id="credit">designed by た</span>
+      </div>
 
-      <a-scene  vr-mode-ui="enabled: false">
-
-        <a-entity animation="easing: linear; property:rotation; dur:50000; to:0 360 0; loop: true;" >
-          <a-entity animation="property: position; from: 0 -0.5 0; to:0 0.5 0; dir: alternate; dur:5000; loop:true" >
-            <a-entity id="sphereWrapper" position="0 0 0" rotation="0 0 0" scale="1 1 1" visible="tre">
+      <a-scene vr-mode-ui="enabled: false">
+        <a-entity
+          animation="easing: linear; property:rotation; dur:50000; to:0 360 0; loop: true;"
+        >
+          <a-entity
+            animation="property: position; from: 0 -0.5 0; to:0 0.5 0; dir: alternate; dur:5000; loop:true"
+          >
+            <a-entity
+              id="sphereWrapper"
+              position="0 0 0"
+              rotation="0 0 0"
+              scale="1 1 1"
+              visible="tre"
+            >
             </a-entity>
             <a-sphere
-              position="0 1.25 -5
+              position="0 1.25 -5"
               radius="1"
               color="#EF2D5E"
               metalness="1"
@@ -75,9 +90,16 @@
           <a-curve-point position="0 0 0"></a-curve-point>
           <a-curve-point position="0 0 0"></a-curve-point>
         </a-curve>
-        <a-camera alongpath="curve: #track1; loop: true; dur: 30000; delay: 10000" wasd-controls-enabled="false"></a-camera>
+        <a-camera
+          alongpath="curve: #track1; loop: true; dur: 40000; delay: 10000"
+          wasd-controls-enabled="false"
+        ></a-camera>
 
-        <a-sky color="black" scale="0.002 0.002 0.002" positon="0 0.5 0"></a-sky>
+        <a-sky
+          color="black"
+          scale="0.002 0.002 0.002"
+          positon="0 0.5 0"
+        ></a-sky>
       </a-scene>
     </div>
   </body>
