@@ -15,7 +15,7 @@
     <script src="assets/001_index.js"></script>
     <!-- aframe library -->
     <script src="https://aframe.io/releases/0.9.1/aframe.min.js"></script>
-    <!-- alongpath I guess -->
+    <!-- other library -->
     <script src="https://rawgit.com/protyze/aframe-curve-component/master/dist/aframe-curve-component.min.js"></script>
     <script src="https://rawgit.com/protyze/aframe-alongpath-component/master/dist/aframe-alongpath-component.min.js"></script>
     <script src="https://wizgrav.github.io/aframe-effects/dist/aframe-effects.js"></script>
@@ -55,15 +55,18 @@
         </div>
       </div>
       <div id="ui">
-        <span id="credit">designed by た</span>
+        <span id="credit">by @saharu54</span>
       </div>
 
       <a-scene vr-mode-ui="enabled: false">
+        <a-light type="directional" color="white" position="6 4 27"></a-light>
+        <a-light type="point" position="0 0 0" intensity="0.3"></a-light>
+
         <a-entity
           animation="easing: linear; property:rotation; dur:50000; to:0 360 0; loop: true;"
         >
           <a-entity
-            animation="property: position; from: 0 -0.5 0; to:0 0.5 0; dir: alternate; dur:5000; loop:true"
+            animation="property: position; from: 0 -1 0; to:0 0.5 0; dir: alternate; dur:5000; loop:true"
           >
             <a-entity
               id="sphereWrapper"
@@ -73,12 +76,6 @@
               visible="tre"
             >
             </a-entity>
-            <a-sphere
-              position="0 1.25 -5"
-              radius="1"
-              color="#EF2D5E"
-              metalness="1"
-            ></a-sphere>
           </a-entity>
         </a-entity>
 
@@ -95,11 +92,7 @@
           wasd-controls-enabled="false"
         ></a-camera>
 
-        <a-sky
-          color="black"
-          scale="0.002 0.002 0.002"
-          positon="0 0.5 0"
-        ></a-sky>
+        <a-sky color="black" scale="0.002 0.002 0.002" positon="0 1 0"></a-sky>
       </a-scene>
     </div>
   </body>

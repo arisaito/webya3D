@@ -15,7 +15,7 @@ a-scene {
 }
 
 body {
-  background: linear-gradient(232deg, #ffffff, #878787);
+  background: linear-gradient(232deg, #ffffff, #f4f4f4, #878787, #646464);
   background-size: 800% 800%;
   -webkit-animation: AnimationName 4s ease infinite;
   -moz-animation: AnimationName 4s ease infinite;
