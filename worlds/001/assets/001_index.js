@@ -19,7 +19,8 @@ window.onload = function() {
     });
     sphere.setAttribute("scale", { x: 0.5, y: 0.5, z: 0.5 });
     sphere.setAttribute("material", {
-      metalness: 0.93
+      /* roughness: 0.1 */
+      metalness: 0.9
     });
     sphere.setAttribute(
       "color",

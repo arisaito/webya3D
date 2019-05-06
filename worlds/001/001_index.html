@@ -71,7 +71,7 @@
           animation="easing: linear; property:rotation; dur:50000; to:0 360 0; loop: true;"
         >
           <a-entity
-            animation="property: position; from: 0 -1 0; to:0 0.5 0; dir: alternate; dur:5000; loop:true"
+            animation="property: position; from: 0 -1 0; to:0 0.5 0; dir: alternate; dur:5000; loop:true; easing: easeInCubic; easing: easeOutCubic"
           >
             <a-entity
               id="sphereWrapper"
@@ -93,7 +93,7 @@
           <a-curve-point position="0 0 0"></a-curve-point>
         </a-curve>
         <a-camera
-          alongpath="curve: #track1; loop: true; dur: 40000; delay: 10000"
+          alongpath="curve: #track1; loop: true; dur: 40000; delay: 10000; easing: ease-in-out;"
           wasd-controls-enabled="false"
         ></a-camera>
 
