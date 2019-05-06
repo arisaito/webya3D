@@ -1,3 +1,11 @@
+body {
+  background: linear-gradient(232deg, #ffffff, #f4f4f4, #878787, #646464);
+  background-size: 800% 800%;
+  -webkit-animation: AnimationName 4s ease infinite;
+  -moz-animation: AnimationName 4s ease infinite;
+  animation: AnimationName 4s ease infinite;
+}
+
 #container {
   position: relative;
   width: 100%;
@@ -12,14 +20,6 @@ a-scene {
   z-index: 0;
   height: 100%;
   width: 100%;
-}
-
-body {
-  background: linear-gradient(232deg, #ffffff, #f4f4f4, #878787, #646464);
-  background-size: 800% 800%;
-  -webkit-animation: AnimationName 4s ease infinite;
-  -moz-animation: AnimationName 4s ease infinite;
-  animation: AnimationName 4s ease infinite;
 }
 
 @-webkit-keyframes AnimationName {
