@@ -17,7 +17,7 @@ window.onload = function() {
       z: Math.random() * 1 * 2 - 1
     });
     sphere.setAttribute("scale", { x: 0.03, y: 0.03, z: 0.03 });
-    sphere.setAttribute("color", "skyblue");
+    sphere.setAttribute("color", "#A3B4BF");
     fragment.appendChild(sphere);
   }
   wrapper.appendChild(fragment);

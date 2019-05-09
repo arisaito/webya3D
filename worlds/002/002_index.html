@@ -15,6 +15,7 @@
     <script src="assets/002_index.js"></script>
     <!-- aframe library -->
     <script src="https://aframe.io/releases/0.9.1/aframe.min.js"></script>
+    <script src="https://cdn.rawgit.com/donmccurdy/aframe-extras/v6.0.0/dist/aframe-extras.min.js"></script>
   </head>
 
   <body>
@@ -54,17 +55,44 @@
         <span id="credit">by @saharu54</span>
       </div>
 
-      <a-scene vr-mode-ui="enabled: false">
-        <!-- 自動生成 -->
-        <a-entity
-          id="sphereWrapper"
+      <a-scene
+        vr-mode-ui="enabled: false"
+        fog="type: exponential; density: 0.2; color: #EFF2E4;"
+      >
+        <a-light
+          type="ambient"
+          color="#F2DC9B"
           position="0 0 0"
-          rotation="0 0 0"
+          intensity="0.3"
+        ></a-light>
+        <a-light
+          type="point"
+          color="white"
+          position="0 10 10"
+          intensity="0.3"
+        ></a-light>
+        <a-light
+          type="point"
+          color="white"
+          position="0 1 1"
+          intensity="0.7"
+        ></a-light>
+        <a-ocean position="0 -0.5 0" color="#A3B4BF"></a-ocean>
+        <a-ocean position="0 0.7 0" rotation="90 0 0" color="#BFA169"></a-ocean>
+        <!-- 自動生成 
+        <a-entity
+          id="sphereWrapper
+          position="0 0 0
+          rotation="
+          0
+          0
+          0
           visible="true"
         >
         </a-entity>
-        <a-camera position="0 0 0"></a-camera>
-        <a-sky color="#ECECEC"></a-sky>
+        -->
+        <a-camera position="0 0 0" wasd-controls-enabled="false"></a-camera>
+        <a-sky color="#EFF2E4"></a-sky>
       </a-scene>
     </div>
   </body>
