@@ -16,6 +16,8 @@
     <!-- aframe library -->
     <script src="https://aframe.io/releases/0.9.1/aframe.min.js"></script>
     <script src="https://cdn.rawgit.com/donmccurdy/aframe-extras/v6.0.0/dist/aframe-extras.min.js"></script>
+    <script src="https://rawgit.com/protyze/aframe-curve-component/master/dist/aframe-curve-component.min.js"></script>
+    <script src="https://rawgit.com/protyze/aframe-alongpath-component/master/dist/aframe-alongpath-component.min.js"></script>
   </head>
 
   <body>
@@ -57,8 +59,15 @@
 
       <a-scene
         vr-mode-ui="enabled: false"
-        fog="type: exponential; density: 0.2; color: #EFF2E4;"
+        fog="type: exponential; density: 0.25; color: #EFF2E4"
       >
+        <a-assets>
+          <a-mixin
+            id="transition"
+            animation="property: position; easing: easeInOutCubic; dur:7000; dir: alternate; loop: true; delay: 5000"
+          ></a-mixin>
+        </a-assets>
+
         <a-light
           type="ambient"
           color="#F2DC9B"
@@ -77,20 +86,27 @@
           position="0 1 1"
           intensity="0.7"
         ></a-light>
-        <a-ocean position="0 -0.5 0" color="#A3B4BF"></a-ocean>
-        <a-ocean position="0 0.7 0" rotation="90 0 0" color="#BFA169"></a-ocean>
-        <!-- 自動生成 
-        <a-entity
-          id="sphereWrapper
-          position="0 0 0
-          rotation="
-          0
-          0
-          0
-          visible="true"
-        >
+
+        <a-entity mixin="transition" animation="to: 0 -10 0">
+          <a-ocean position="0 -0.5 0" color="#A3B4BF"></a-ocean>
         </a-entity>
-        -->
+        <a-entity mixin="transition" animation="to: 0 10 0">
+          <a-ocean
+            position="0 0.7 0"
+            rotation="90 0 0"
+            color="#BFA169"
+          ></a-ocean>
+        </a-entity>
+
+        <a-entity mixin="transition" animation="to: 0 10 0">
+          <a-sphere
+            position="0 -10 -7.5"
+            scale="3 3 3"
+            color="red"
+            roughness="1"
+          ></a-sphere>
+        </a-entity>
+
         <a-camera position="0 0 0" wasd-controls-enabled="false"></a-camera>
         <a-sky color="#EFF2E4"></a-sky>
       </a-scene>
